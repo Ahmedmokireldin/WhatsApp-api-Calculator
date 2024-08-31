@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Mokireldin's WhatsApp Sender</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="mainContainer">
+        <h1><i class="fab fa-whatsapp icon"></i><span id="title">Ahmed Mokireldin's WhatsApp Sender</span></h1>
+        
+        <div id="languageSelector">
+            <label for="language"><i class="fas fa-language icon"></i><span id="languageLabel">Language / اللغة:</span></label>
+            <select id="language" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="ar">العربية</option>
+            </select>
+        </div>
+
+        <div id="pricingCalculator">
+            <h2><i class="fas fa-coins icon"></i><span id="pricingTitle">Pricing Calculator</span></h2>
+            <label for="country"><i class="fas fa-globe icon"></i><span id="countryLabel">Select Country:</span></label>
+            <select id="country" onchange="updatePrice()">
+                <!-- Countries will be populated dynamically using JavaScript -->
+            </select>
+
+            <label for="messageType"><i class="fas fa-envelope icon"></i><span id="messageTypeLabel">Select Message Type:</span></label>
+            <select id="messageType" onchange="updatePrice()">
+                <option value="service">Service conversation</option>
+                <option value="authentication">Authentication conversation</option>
+                <option value="utility">Utility conversation</option>
+                <option value="marketing">Marketing conversation</option>
+            </select>
+
+            <p><i class="fas fa-tag icon"></i><span id="priceLabel">Price per message:</span> <span id="pricePerMessage">$0.00</span></p>
+
+            <label for="messageCount"><i class="fas fa-list-ol icon"></i><span id="messageCountLabel">Number of Messages:</span></label>
+            <input type="number" id="messageCount" min="1" value="100" oninput="calculatePrice()">
+
+            <button onclick="calculatePrice()"><i class="fas fa-calculator"></i> <span id="calculateButton">Calculate Total Price</span></button>
+        </div>
+
+        <div id="pricingResults"></div>
+
+        <div id="visitorCounter">
+            <i class="fas fa-users icon"></i><span id="visitorLabel">Visitors:</span> <span id="visitorCount">0</span>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://facebook.com/Ahmedmokireldin" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com/Ahmedmokireldin" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@ahmedmokireldin" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://twitter.com/Ahmedmokireldin" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com/in/Ahmedmokireldin" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://threads.net/ahmedmokireldin" target="_blank"><i class="fas fa-at"></i></a>
+            <a href="https://pinterest.com/Ahmedmokireldin" target="_blank"><i class="fab fa-pinterest"></i></a>
+            <a href="mailto:Ahmedmokireldin@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=201004101309&text=Client-GitHub-page" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
